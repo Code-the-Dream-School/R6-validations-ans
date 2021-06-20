@@ -1,3 +1,4 @@
+<div class="card shadow p-3 mb-5 bg-white rounded">
 <p id="notice"><%= notice %></p>
 
 <p>
@@ -14,6 +15,6 @@
   <strong>Customer:</strong>
   <%= @order.customer.full_name %>
 </p>
-
-<%= link_to 'Edit', edit_order_path(@order) %> |
-<%= link_to 'Back', orders_path %>
+</div>
+<%= link_to 'Edit', edit_order_path(@order), class: "btn btn-primary"  %> |
+<%= link_to 'Back', orders_path, class: "btn btn-primary"  %>
