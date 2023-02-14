@@ -1,0 +1,20 @@
+version: "3.8"
+
+networks:
+  application:
+
+volumes:
+  pgdata:
+
+services:
+  api:
+    build:
+      context: .
+    networks:
+      - application
+    ports:
+      - "3000:3000"
+    stdin_open: true
+    volumes:
+      - .:/app
+
